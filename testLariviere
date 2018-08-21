@@ -1,0 +1,44 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int* decompo(int & nb,int nbC)
+{
+    int i=0;
+    int* T = new int [nbC];
+    for(int j=nbC;j>=0;j--)
+    {
+        int l=nb/pow(10,j);
+        nb=nb-l*pow(10,j);
+        T[i]=l;
+        i++;
+       // cout<< "l= "<<l<< endl;
+    }
+    return(T);
+}
+int sequence(int nb,int * T)
+{
+    int ajout=0;
+    for(int k=0;k<=4;k++)
+    {
+        ajout+=T[k];
+        }
+    return(nb+ajout);
+}
+int riviereCroise(int & a,int tailleA,int & b,int tailleB,int limite)
+{
+    while(i<=limite)
+    {
+        int* resultA=decompo(&a,tailleA);
+        int* resultB=decompo(&b,tailleB);
+    }
+}
+
+int main()
+{
+ int* T=decompo(123,3); 
+ int result=sequence(123,T);
+ cout << "resultat= " << result << endl;
+ 
+}
